@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StFlairs Awards</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Ballet:wght@400&text=Awards&display=swap">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&text=StFlairs&display=swap">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ballet:wght@400&text=Awards&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&text=StFlairs&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap">
+  
+    <style>
+
+        /********************************************
+         CONTENTS
+         --------------------------------------------
+         - Utilities
+         - Page
+         - Company
+
+        ********************************************/
+
+
+
+        /*
+         * Utilities: 
+         *
+         */
+
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        
+        .visually-hidden {
+            position: absolute;
+            clip: rect(0, 0, 0, 0);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            padding: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        .guic-col-fb {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .guic-row-fb {
+            display: flex;
+            flex-flow: row;
+        }
+
+
+
+        /*
+         * Page 
+         */
+
+        .page {
+            font: 1rem/1.5 roboto, Tahoma, 'trebuchet ms', sans-serif;
+            background: #cc2127;
+            color: #ffffcf;
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page::before {
+            content: 'StFlairs';
+            opacity: .05;
+            font: 100vh/1 ballet, 'Brush Script MT', 'Times New Roman', Times, serif;
+
+            position: absolute;
+            z-index: -1;
+        }
+
+        .page__content {
+            padding: 1.5rem 2rem 2.1rem 3rem;
+            box-shadow: -1px 1px 0 0 #eee8aa;
+            border-radius: 14%;
+            
+            
+            position: relative;
+            left: 1rem;
+            align-items: end;
+            margin: auto;
+        }
+
+        .page__notification {
+            
+            width: 100%;
+            padding: 0.5em;
+            box-sizing: border-box;
+            background: rgba(255,255,255,0.2);
+
+            font-size: 0.75em;
+            font-weight: bold;
+            text-align: center;
+            line-height: 2;
+            text-transform: uppercase;
+            letter-spacing: 1em;
+            
+            position: absolute;
+            top: 0;
+            margin: 0;
+        } 
+
+        .page__designer {
+            font-size: 0.75em;
+            text-align: end;
+            padding: 0 3.5rem;
+        }
+
+        .page__designer > a {
+            color: inherit;
+        }
+
+        .page__designer > a:hover {
+            text-decoration: none;
+        }
+
+
+        /* 
+         * Company
+         */
+
+        .company__name {
+            font: 700 4rem/0.8 'playfair display', 'Times New Roman', Times, serif;
+            color: #ffffcf;
+
+            margin: 0;
+        }
+
+        .company__niche {
+            font: normal 4rem/1 ballet, 'Times New Roman', Times, serif;
+            text-align: right;
+            color: #eee8aa;
+
+            margin: 1.2rem 0 0;
+        }
+
+        .company__phone {
+            color: white;
+            gap: .5em;
+            text-decoration: none;
+            margin-top: 1rem;
+            letter-spacing: .1em;
+        }
+        
+        .company__phone:hover {
+            text-decoration: underline;
+        }
+
+        .company__products {
+            text-align: end;
+            line-height: 1.7;
+            color: #ffffcf;
+            order: 2;
+
+            margin: 1.2rem 0 0;
+        }
+
+        .company__products > :nth-child(2) {
+            letter-spacing: .05em;
+        }
+
+        .company__products > :last-child::after {
+            content: '';
+            width: 4rem;
+            height: 0.1rem;
+            background: #ffffcf;
+            display: inline-flex;
+            position: relative;
+            bottom: 0.2rem;
+            margin: 0 0.25rem 0 0.5rem;
+        }
+
+    </style>
+
+</head>
+<body class="guic-col-fb page">
+    <main class="guic-col-fb page__content">
+        <h1 class="guic-col-fb company__name">
+            <span>St Flairs</span>
+            <span class="company__niche">Awards</span>
+        </h1>
+        <p class="guic-col-fb company__products">
+            <span class="visually-hidden">Our Products include: </span>
+            <span>Trophies, Plaques, </span>
+            <span>Crystals, Medals, </span>
+            <span>etc.</span>
+        </p>
+        <nav>
+            <span class="visually-hidden">Contact Us: </span>
+            <a class="guic-row-fb company__phone" href="tel:+2348130380961">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                +2348130380961
+            </a>
+        </nav>
+    </main>
+    <footer>
+        <p class="page__notification">This site is under construction</p>
+        <p class="page__designer">Design by <a href="https://twitter.com/ToheebDotCom"> @ToheebDotCom</a></p>
+    </footer>
+</body>
+</html>
